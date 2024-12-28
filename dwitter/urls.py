@@ -7,8 +7,8 @@ app_name = "dwitter"
 
 urlpatterns = [
     path('signup/', signup, name='signup'),
-    path('login/', auth_views.LoginView.as_view(), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='logout'),
     path("", dashboard, name="dashboard"),
     path("profile_list/", profile_list, name="profile_list"),
     path("profile/<int:pk>", profile, name="profile"),
